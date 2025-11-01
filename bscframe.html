@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LKPD Interaktif: Pecahkan Misi CT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Balsamiq+Sans:wght@700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #e6fffa; /* Warna latar belakang cerah (Cyan Muda) */
+      }
+      .main-container {
+        background-color: #ffffff;
+        border-radius: 2rem;
+        box-shadow: 0 10px 30px rgba(26, 86, 60, 0.2);
+        border: 4px solid #319795; /* Border Teal */
+      }
+      .section-header {
+        font-family: "Balsamiq Sans", cursive;
+        background-color: #4fd1c5; /* Medium Teal */
+        color: #1a472a;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        margin-bottom: 1rem;
+        border-left: 6px solid #38a169;
+      }
+      .input-box {
+        border: 2px solid #a0aec0;
+        border-radius: 0.5rem;
+        transition: border-color 0.3s;
+      }
+      .input-box:focus {
+        border-color: #38a169;
+        box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.4);
+      }
+      .task-card {
+        background-color: #f0fff4; /* Hijau Pucat untuk Misi */
+        border-left: 6px solid #38a169; /* Aksen Hijau Tua */
+      }
+      .puzzle-box {
+        background-color: #fff8e1; /* Kuning Muda untuk Teka-teki */
+        border: 2px dashed #f6ad55;
+      }
+    </style>
+  </head>
+  <body class="p-4 md:p-8">
+    <div class="main-container max-w-6xl mx-auto p-6 md:p-12">
+      <!-- HEADER GAME -->
+      <header class="text-center mb-10">
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-2 font-['Balsamiq_Sans']"
+        >
+          🔑 LKPD: PECAHKAN KODE CT! 🔑
+        </h1>
+        <p class="text-xl text-teal-700 font-semibold">
+          Selamat Datang di Misi Hutan Komputasional. Kerjasama adalah Kunci!
+        </p>
+      </header>
+
+      <!-- TAHAP 1: Informasi Kelompok -->
+      <div class="mb-8 p-4 border-b-2 border-teal-300">
+        <h2 class="text-2xl font-bold text-gray-700 mb-3">
+          Tahap 1: Tim & Pembagian Tugas (Caring)
+        </h2>
+        <p class="text-sm italic text-gray-600 mb-4">
+          Tulis nama anggota tim dan bagi tugas Dekomposisi (R1 & R3) dan Pola
+          (R2 & R4) dengan adil.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-600"
+              >Nama Kelompok:</label
+            >
+            <input
+              type="text"
+              placeholder="CT Squad Alpha"
+              class="input-box w-full mt-1 p-2"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-600"
+              >Anggota Tim & Peran Kunci:</label
+            >
+            <input
+              type="text"
+              placeholder="Contoh: Budi (Dekomposisi), Ani (Pakar Pola)"
+              class="input-box w-full mt-1 p-2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- RINTANGAN & MISI AKTIF -->
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold section-header inline-block">
+          Tahap 2: Pecahkan Rintangan (Dekomposisi & Pola)
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- RINTANGAN 1 -->
+          <div class="task-card p-6 rounded-xl">
+            <h3 class="font-bold text-2xl text-teal-700 mb-3">
+              1. Gerbang Waktu ⏳
+            </h3>
+            <p class="text-sm italic text-gray-600 mb-4">
+              Tantangan: Gerbang butuh 4 digit kode. Kode ini didapat dari hasil
+              memecahkan pola aritmatika.
+            </p>
+
+            <h4 class="font-bold text-lg text-red-600 mt-4">
+              🧩 Misi Teka-Teki: Cari Pola Angka
+            </h4>
+            <div class="puzzle-box p-3 rounded-lg mt-2 mb-4">
+              <p class="font-mono text-center text-xl font-bold">
+                DERET KODE: 1, 2, 4, 7, 11, ? , ?
+              </p>
+              <p class="text-center text-sm mt-1 text-gray-700">
+                Petunjuk: Ada Pola Penambahan. Angka ke-2 dan ke-4 hasil
+                pemecahan adalah kode sandi!
+              </p>
+            </div>
+
+            <h4 class="font-bold text-lg text-green-700">
+              ✅ Jawaban & Langkah Tim (Dekomposisi)
+            </h4>
+            <ol class="list-decimal ml-6 space-y-2 text-sm">
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 1: Tuliskan pola penambahan yang ditemukan."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 2: Tuliskan dua angka lanjutan (angka setelah 11)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Kode Sandi 4 Digit Final (Gabungkan 4 angka dari deret: [X X X X])."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+            </ol>
+          </div>
+
+          <!-- RINTANGAN 2 -->
+          <div class="task-card p-6 rounded-xl">
+            <h3 class="font-bold text-2xl text-teal-700 mb-3">
+              2. Jembatan Pola Suara 🔊
+            </h3>
+            <p class="text-sm italic text-gray-600 mb-4">
+              Tantangan: Ada 9 ubin. Pola injakan yang aman adalah
+              SUARA-TENANG-SUARA-TENANG-SUARA. Ubin yang tenang harus dilompati.
+            </p>
+
+            <h4 class="font-bold text-lg text-red-600 mt-4">
+              🧩 Misi Teka-Teki: Tentukan Algoritma Injak
+            </h4>
+            <div class="puzzle-box p-3 rounded-lg mt-2 mb-4">
+              <p class="font-mono text-center text-xl font-bold">
+                URUTAN 9 UBIN: (S, T, S, T, S, T, S, T, S)
+              </p>
+              <p class="text-center text-sm mt-1 text-gray-700">
+                S = Suara (Aman), T = Tenang (Lompat). Ubin ke berapa yang harus
+                diinjak?
+              </p>
+            </div>
+
+            <h4 class="font-bold text-lg text-green-700">
+              ✅ Jawaban & Langkah Tim (Dekomposisi)
+            </h4>
+            <ol class="list-decimal ml-6 space-y-2 text-sm">
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 1: Tuliskan nomor ubin yang aman (yang diinjak)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 2: Tuliskan Pola Ubin yang harus LOMPAT."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 3: Tentukan urutan tim melintas jembatan (Fokus Caring)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+            </ol>
+          </div>
+
+          <!-- RINTANGAN 3 -->
+          <div class="task-card p-6 rounded-xl">
+            <h3 class="font-bold text-2xl text-teal-700 mb-3">
+              3. Labirin Kabut Cahaya 💡
+            </h3>
+            <p class="text-sm italic text-gray-600 mb-4">
+              Tantangan: Labirin punya 3 Zona. Setiap Zona ada 1 Kunci.
+              Gabungkan 3 Kunci itu menjadi **Kunci Utama Labirin**.
+            </p>
+
+            <h4 class="font-bold text-lg text-red-600 mt-4">
+              🧩 Misi Teka-Teki: Urutkan Kunci Abstraksi
+            </h4>
+            <div class="puzzle-box p-3 rounded-lg mt-2 mb-4">
+              <p class="font-mono text-center text-xl font-bold">
+                Kunci: BUKU, KOMPAS, SENTUH.
+              </p>
+              <p class="text-center text-sm mt-1 text-gray-700">
+                Urutkan 3 kata ini dari yang paling **Abstrak** (tidak terlihat)
+                ke paling **Konkret** (terlihat)!
+              </p>
+            </div>
+
+            <h4 class="font-bold text-lg text-green-700">
+              ✅ Jawaban & Langkah Tim (Dekomposisi)
+            </h4>
+            <ol class="list-decimal ml-6 space-y-2 text-sm">
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 1: Tuliskan urutan 3 kunci (Abstrak ke Konkret)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 2: Tuliskan Kunci Utama Labirin (gabungan 3 kata)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 3: Tentukan Pola Navigasi di Labirin (misal: ikuti cahaya hijau)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+            </ol>
+          </div>
+
+          <!-- RINTANGAN 4 -->
+          <div class="task-card p-6 rounded-xl">
+            <h3 class="font-bold text-2xl text-teal-700 mb-3">
+              4. Penjaga Abstraksi 🗣️
+            </h3>
+            <p class="text-sm italic text-gray-600 mb-4">
+              Tantangan: Penjaga hanya mau dengar Rangkuman 3 Langkah Utama tim
+              dari Rintangan 1 sampai 3. Jangan sebut detail kecil (Prinsip
+              Abstraksi)!
+            </p>
+
+            <h4 class="font-bold text-lg text-red-600 mt-4">
+              🧩 Misi Teka-Teki: Buat Algoritma Final
+            </h4>
+            <div class="puzzle-box p-3 rounded-lg mt-2 mb-4">
+              <p class="font-mono text-center text-xl font-bold">
+                3 Kalimat Rangkuman = Algoritma Final Tim.
+              </p>
+              <p class="text-center text-sm mt-1 text-gray-700">
+                Buat 3 kalimat yang merangkum keseluruhan perjalanan tim
+                (R1-R3).
+              </p>
+            </div>
+
+            <h4 class="font-bold text-lg text-green-700">
+              ✅ Jawaban & Langkah Tim (Dekomposisi)
+            </h4>
+            <ol class="list-decimal ml-6 space-y-2 text-sm">
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 1: Rangkuman Dekomposisi Rintangan 1 (Ringkas)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 2: Rangkuman Pengenalan Pola Rintangan 2 & 3 (Ringkas)."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  placeholder="Langkah 3: Algoritma Final yang diserahkan ke Penjaga."
+                  class="input-box w-full p-2 text-xs"
+                />
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAHAP 3: POLA TERSEMBUNYI & CARING ASSESSMENT -->
+      <div class="mb-10 pt-6 border-t-2 border-teal-300">
+        <h2 class="text-3xl font-bold section-header inline-block">
+          Tahap 3: Pola & Caring (Kolaborasi)
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Pola Caring Internal -->
+          <div class="p-4 rounded-lg bg-rose-50 border-2 border-rose-300">
+            <h3 class="font-bold text-xl text-rose-700 mb-2">
+              Pola Komunikasi Tim (Caring)
+            </h3>
+            <p class="text-sm mb-2">
+              Tulis Pola Komunikasi: Bagaimana tim Anda memastikan semua ide
+              didengar (terutama di R2 dan R4)?
+            </p>
+            <textarea
+              placeholder="Contoh: Kami selalu meminta Analis Pola berbicara lebih dulu sebelum mengambil keputusan."
+              rows="3"
+              class="input-box w-full p-2 text-sm"
+            ></textarea>
+          </div>
+          <!-- Algoritma Final -->
+          <div class="p-4 rounded-lg bg-yellow-50 border-2 border-yellow-300">
+            <h3 class="font-bold text-xl text-yellow-700 mb-2">
+              Peta & Algoritma Akhir
+            </h3>
+            <p class="text-sm mb-2">
+              Pindahkan semua hasil pemecahan (Kode, Pola, Algoritma) ke Peta
+              Visual (Kertas Plano)!
+            </p>
+            <textarea
+              placeholder="Tuliskan di sini 5 langkah kunci ALGORITMA perjalanan tim Anda (Mulaj - Selesai)."
+              rows="3"
+              class="input-box w-full p-2 text-sm"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
